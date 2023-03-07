@@ -7,7 +7,7 @@ RUN export DEBIAN_FRONTEND=noninteractive \
 	&& apt-get install -y \
 		wget \
 		screen \
-		openjdk-20-jdk \
+		openjdk-19-jdk \
 		nano \
 		htop \
 	&& apt-get clean \
