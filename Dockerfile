@@ -15,4 +15,5 @@ RUN export DEBIAN_FRONTEND=noninteractive \
 	;
 
 WORKDIR /root/
-ENTRYPOINT /root/minecraft/startmc.sh
+#ENTRYPOINT /root/minecraft/startmc.sh
+CMD /bin/ping localhost
