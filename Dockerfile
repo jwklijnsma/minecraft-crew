@@ -10,6 +10,7 @@ RUN export DEBIAN_FRONTEND=noninteractive \
 		openjdk-17-jdk \
 		nano \
 		htop \
+		iputils-ping \
 	&& apt-get clean \
 	&& rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \
 	;
