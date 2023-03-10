@@ -14,6 +14,6 @@ RUN export DEBIAN_FRONTEND=noninteractive \
 	&& apt-get clean \
 	&& rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \
 	;
-
+RUN chmod +x /home/minecraft/startmc.sh
 WORKDIR /home/minecraft
 ENTRYPOINT /home/minecraft/startmc.sh
