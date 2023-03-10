@@ -15,6 +15,5 @@ RUN export DEBIAN_FRONTEND=noninteractive \
 	&& rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \
 	;
 
-WORKDIR /root/
-#ENTRYPOINT /root/minecraft/startmc.sh
-CMD /bin/ping localhost
+WORKDIR /home/minecraft
+ENTRYPOINT /home/minecraft/startmc.sh
