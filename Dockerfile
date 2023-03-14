@@ -15,5 +15,6 @@ RUN export DEBIAN_FRONTEND=noninteractive \
 	&& rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \
 	;
 WORKDIR /home/minecraft
-#ENTRYPOINT /home/minecraft/startmc.sh
-CMD /bin/ping localhost
+ENV LD_LIBRARY_PATH=.
+RUN chmod +x bedrock_server
+CMD ./bedrock_server
