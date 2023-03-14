@@ -16,5 +16,4 @@ RUN export DEBIAN_FRONTEND=noninteractive \
 	;
 WORKDIR /home/minecraft
 ENV LD_LIBRARY_PATH=.
-RUN chmod +x bedrock_server
 CMD ./bedrock_server
