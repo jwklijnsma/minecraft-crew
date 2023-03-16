@@ -13,6 +13,7 @@ RUN export DEBIAN_FRONTEND=noninteractive \
 		curl \
 		grep \
 		openssl \
+		python3 \
 	&& apt-get clean \
 	&& rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \
 	;
