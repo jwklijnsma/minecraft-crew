@@ -22,4 +22,4 @@ RUN dpkg -i libssl1.1.deb
 COPY update_bedrock_server.py /bin/
 WORKDIR /home/minecraft
 ENV LD_LIBRARY_PATH=.
-CMD python3 update_bedrock_server.py && /bin/./bedrock_server
+CMD python3 /bin/update_bedrock_server.py && /bin/./bedrock_server
