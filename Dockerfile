@@ -18,6 +18,7 @@ RUN export DEBIAN_FRONTEND=noninteractive \
 	;
 RUN wget http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/libssl1.1_1.1.1f-1ubuntu2_amd64.deb -O libssl1.1.deb	
 RUN dpkg -i libssl1.1.deb
+COPY update_bedrock_server.py /bin/
 WORKDIR /home/minecraft
 ENV LD_LIBRARY_PATH=.
-CMD ./bedrock_server
+CMD python3 update_bedrock_server.py && /bin/./bedrock_server
