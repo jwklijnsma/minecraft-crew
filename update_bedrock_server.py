@@ -3,7 +3,7 @@ import requests
 import zipfile
 
 # Set the URL to download the file from
-url = "https://minecraft.net/en-us/download/server/bedrock/."
+url = "https://minecraft.net/en-us/download/server/bedrock/"
 
 # Set the headers to use in the request
 headers = {
