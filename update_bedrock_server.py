@@ -1,6 +1,7 @@
 import os
 import requests
 import zipfile
+import re
 
 # Set the URL to download the file from
 url = "https://minecraft.net/en-us/download/server/bedrock/"
@@ -16,7 +17,10 @@ headers = {
 response = requests.get(url, headers=headers)
 
 # Parse the response and get the URL of the bedrock_server file
-download_url = response.text.split("\n")[127].split('"')[3]
+regex = r'https://minecraft\.azureedge\.net/bin-linux/[^"]*'
+download_url = re.search(regex, response.text).group(0)
+
+print(download_url)
 
 # Download the file and save it as bedrock-server.zip
 response = requests.get(download_url)
