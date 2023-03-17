@@ -2,6 +2,7 @@ import os
 import requests
 import zipfile
 import re
+import shutil
 
 # Set the URL to download the file from
 url = "https://minecraft.net/en-us/download/server/bedrock/"
@@ -39,4 +40,7 @@ with zipfile.ZipFile("/tmp/bedrock-server.zip", "r") as zip_ref:
 #    if file != "/tmp/bedrock_server":
 #        os.remove(os.path.join(dir_path, file))
 
-os.replace('/tmp/bedrock_server', '/home/minecraft/bedrock_server')
+src_file = "/tmp/bedrock_server"
+dst_file = "/home/minecraft/bedrock_server"
+
+shutil.copy(src_file, dst_file)
