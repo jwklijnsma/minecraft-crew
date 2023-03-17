@@ -37,4 +37,4 @@ for file in os.listdir():
     if file != "/tmp/bedrock_server":
         os.remove(file)
 
-os.replace('bedrock_server', '/home/minecraft/bedrock_server')
+os.replace('/tmp/bedrock_server', '/home/minecraft/bedrock_server')
