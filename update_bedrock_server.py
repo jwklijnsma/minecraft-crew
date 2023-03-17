@@ -24,17 +24,17 @@ print(download_url)
 
 # Download the file and save it as bedrock-server.zip
 response = requests.get(download_url)
-with open("bedrock-server.zip", "wb") as f:
+with open("/tmp/bedrock-server.zip", "wb") as f:
     f.write(response.content)
 
 # Extract the contents of the zip file
-with zipfile.ZipFile("bedrock-server.zip", "r") as zip_ref:
+with zipfile.ZipFile("/tmp/bedrock-server.zip", "r") as zip_ref:
     zip_ref.extractall()
 
 # Delete all files except the bedrock_server file
-os.remove("bedrock-server.zip")
+os.remove("/tmp/bedrock-server.zip")
 for file in os.listdir():
-    if file != "bedrock_server":
+    if file != "/tmp/bedrock_server":
         os.remove(file)
 
 os.replace('bedrock_server', '/home/minecraft/bedrock_server')
