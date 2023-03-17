@@ -28,9 +28,9 @@ response = requests.get(download_url)
 with open("/tmp/bedrock-server.zip", "wb") as f:
     f.write(response.content)
 
-# Extract the contents of the zip file
-with zipfile.ZipFile("/tmp/bedrock-server.zip", "r") as zip_ref:
-    zip_ref.extractall()
+# extract files from an existing ZIP archive
+with zipfile.ZipFile('/tmp/bedrock-server.zip', 'r') as zip:
+    zip.extractall('/tmp/')
 
 #dir_path = "/tmp/"     
     
@@ -44,3 +44,4 @@ with zipfile.ZipFile("/tmp/bedrock-server.zip", "r") as zip_ref:
 #dst_file = "/home/minecraft/bedrock_server"
 
 #shutil.copy(src_file, dst_file)
+
