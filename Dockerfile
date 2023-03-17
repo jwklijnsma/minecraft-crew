@@ -15,6 +15,7 @@ RUN export DEBIAN_FRONTEND=noninteractive \
 		openssl \
 		python3 \
 		python3-pip \
+		unzip \
 	&& apt-get clean \
 	&& rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \
 	;
