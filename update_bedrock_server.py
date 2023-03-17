@@ -32,7 +32,7 @@ with open("/tmp/bedrock-server.zip", "wb") as f:
 with zipfile.ZipFile('/tmp/bedrock-server.zip', 'r') as zip:
     zip.extractall('/tmp/')
 
-   
+dir_path = "/tmp/"   
     
 # Delete all files except the bedrock_server file
 os.remove("/tmp/bedrock-server.zip")
