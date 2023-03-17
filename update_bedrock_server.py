@@ -39,4 +39,4 @@ with zipfile.ZipFile("/tmp/bedrock-server.zip", "r") as zip_ref:
 #    if file != "/tmp/bedrock_server":
 #        os.remove(os.path.join(dir_path, file))
 
-os.replace('/tmp/bedrock_server', '/home/minecraft/bedrock_server')
+#os.replace('/tmp/bedrock_server', '/home/minecraft/bedrock_server')
