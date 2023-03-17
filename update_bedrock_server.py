@@ -31,12 +31,12 @@ with open("/tmp/bedrock-server.zip", "wb") as f:
 with zipfile.ZipFile("/tmp/bedrock-server.zip", "r") as zip_ref:
     zip_ref.extractall()
 
-dir_path = "/tmp/"     
+#dir_path = "/tmp/"     
     
 # Delete all files except the bedrock_server file
-os.remove("/tmp/bedrock-server.zip")
-for file in os.listdir():
-    if file != "/tmp/bedrock_server":
-        os.remove(os.path.join(dir_path, file))
+#os.remove("/tmp/bedrock-server.zip")
+#for file in os.listdir():
+#    if file != "/tmp/bedrock_server":
+#        os.remove(os.path.join(dir_path, file))
 
 os.replace('/tmp/bedrock_server', '/home/minecraft/bedrock_server')
