@@ -1,4 +1,4 @@
-FROM debian:bullseye
+FROM debian:bookworm
 LABEL maintainer="janwiebe@janwiebe.eu"
 
 RUN export DEBIAN_FRONTEND=noninteractive \
